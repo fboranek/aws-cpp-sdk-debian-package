@@ -1,0 +1,4 @@
+usr/lib/x86_64-linux-gnu/libaws-checksums.so
+usr/lib/x86_64-linux-gnu/libaws-c-common.so.*
+usr/lib/x86_64-linux-gnu/libaws-c-event-stream.so.*
+usr/lib/x86_64-linux-gnu/libaws-cpp-sdk-core.so

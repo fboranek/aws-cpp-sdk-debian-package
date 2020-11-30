@@ -1,0 +1,20 @@
+Source: aws-sdk-cpp-test
+Section: libs
+Priority: optional
+Maintainer: Nobody <nobody>
+Homepage: https://github.com/fboranek/aws-cpp-sdk-debian-package
+Build-Depends:
+ build-essential,
+ cmake (>= 3.12),
+ debhelper,
+ aws-cpp-sdk-transfer-dev,
+ pkg-config,
+Standards-Version: 4.1.4
+
+Package: aws-sdk-cpp-test
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Test of aws-sdk-cpp package

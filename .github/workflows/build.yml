@@ -1,0 +1,35 @@
+name: Build
+
+on:
+ - push
+ - pull_request
+
+jobs:
+  build-deb-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set VERSION
+        run: echo "::set-output name=VERSION::`dpkg-parsechangelog -S Version`"
+        id: version
+      - name: build
+        run: docker build --file Dockerfile.build -t pkg-aws:build .
+      - name: create container
+        run: docker container create --name packages pkg-aws:build
+      - run: docker container cp packages:aws-cpp-sdk-core-dev_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - run: docker container cp packages:aws-cpp-sdk-core0_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - run: docker container cp packages:aws-cpp-sdk-s3-dev_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - run: docker container cp packages:aws-cpp-sdk-s30_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - run: docker container cp packages:aws-cpp-sdk-transfer-dev_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - run: docker container cp packages:aws-cpp-sdk-transfer0_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - name: remove container
+        run: docker container rm -f packages
+      - name: Upload debian packages
+        uses: actions/upload-artifact@v2
+        with:
+          name: packages
+          path: '*.deb'
+      - name: Copy package for test
+        run: mkdir dist && cp *.deb dist/
+      - name: Test - build dummy aplication
+        run: docker build --file Dockerfile.test.build .

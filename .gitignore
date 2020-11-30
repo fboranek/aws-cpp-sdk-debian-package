@@ -1,0 +1,15 @@
+aws-sdk-cpp-test_*
+.debhelper/
+*.debhelper.log
+*.substvars
+debian/aws-cpp-sdk-core-dev/
+debian/aws-cpp-sdk-core0/
+debian/aws-cpp-sdk-s3-dev/
+debian/aws-cpp-sdk-s30/
+debian/aws-cpp-sdk-transfer-dev/
+debian/aws-cpp-sdk-transfer0/
+debian/debhelper-build-stamp
+debian/files
+debian/tmp/
+dist/
+obj-x86_64-linux-gnu/

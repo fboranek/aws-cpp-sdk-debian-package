@@ -1,0 +1,6 @@
+aws-sdk-cpp-test (1.0.0) stable; urgency=medium
+
+  * Initial release
+
+ -- Frantisek Boranek <fboranek@gmail.com>  Fri, 27 Nov 2020 15:05:28 +0100
+

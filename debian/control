@@ -1,0 +1,76 @@
+Source: aws-cpp-sdk
+Section: libs
+Priority: optional
+Maintainer: Nobody <nobody>
+Homepage: https://github.com/fboranek/aws-sdk-cpp-debian-package
+Build-Depends:
+ build-essential,
+ cmake (>= 3.12),
+ debhelper (>= 12),
+ git,
+ libcurl4-openssl-dev,
+ zlib1g-dev,
+ libssl-dev,
+ pkg-config,
+Standards-Version: 4.1.4
+
+Package: aws-cpp-sdk-core-dev
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ aws-cpp-sdk-core0 (= ${binary:Version}),
+Description: Core http and utility library for the AWS C++ SDK
+
+Package: aws-cpp-sdk-core0
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Core http and utility library for the AWS C++ SDK
+ .
+ AWS SDK C++ bindings
+
+
+Package: aws-cpp-sdk-s3-dev
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ aws-cpp-sdk-s30 (= ${binary:Version}),
+ aws-cpp-sdk-core-dev,
+Description: C++ SDK for the AWS s3 service
+
+Package: aws-cpp-sdk-s30
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: C++ SDK for the AWS s3 service
+ .
+ AWS SDK C++ bindings
+
+
+Package: aws-cpp-sdk-transfer-dev
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ aws-cpp-sdk-transfer0 (= ${binary:Version}),
+ aws-cpp-sdk-s3-dev,
+Description: High-level C++ SDK for file transfer to/from AWS S3
+
+Package: aws-cpp-sdk-transfer0
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: High-level C++ SDK for file transfer to/from AWS S3
+ .
+ AWS SDK C++ bindings

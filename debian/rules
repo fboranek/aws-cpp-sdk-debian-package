@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+DEB_BUILD_OPTIONS+= nostrip
+
+sdk_VERSION=$(shell dpkg-parsechangelog -S Version | grep -o -E "[0-9]+\.[0-9]+\.[0-9]+")
+
+%:
+	dh $@ --parallel
+
+override_dh_gencontrol:
+	dh_gencontrol -- -Vsdk:Version="${sdk_VERSION}"
+

@@ -1,0 +1,12 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: aws-cpp-sdk
+Source: https://github.com/fboranek/aws-cpp-sdk-debian-package
+
+Files: *
+Copyright: 2020 Frantisek Boranek
+License: MIT
+
+Files: ${CMAKE_BUILD_DIR}/_deps/*
+Copyright: https://github.com/aws/aws-sdk-cpp
+License: Apache License 2.0
+

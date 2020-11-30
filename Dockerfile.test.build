@@ -1,0 +1,15 @@
+# docker build --file Dockerfile.test.build .
+
+FROM debian:buster
+
+RUN apt-get update \
+  && apt-get --assume-yes install \
+  pbuilder aptitude cmake pkg-config
+
+WORKDIR /tmp/
+COPY package_test /tmp/
+COPY dist /tmp/deps
+
+RUN dpkg -i /tmp/deps/* || apt-get install -f
+RUN /usr/lib/pbuilder/pbuilder-satisfydepends
+RUN dpkg-buildpackage -j4

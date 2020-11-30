@@ -1,0 +1,29 @@
+# aws-cpp-sdk-core
+usr/include/aws/core/*
+usr/lib/x86_64-linux-gnu/pkgconfig/aws-cpp-sdk-core.pc
+usr/lib/x86_64-linux-gnu/cmake/aws-cpp-sdk-core/*.cmake
+
+# aws-c-common
+usr/include/aws/common/*
+usr/lib/x86_64-linux-gnu/aws-c-common/cmake/aws-c-common*.cmake
+usr/lib/x86_64-linux-gnu/aws-c-common/cmake/shared/aws-c-common*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-common.so
+usr/lib/x86_64-linux-gnu/cmake/AwsCFlags.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsCheckHeaders.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsSharedLibSetup.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsTestHarness.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsLibFuzzer.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsSanitizers.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsSIMD.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsFindPackage.cmake
+
+# aws-checksums
+usr/include/aws/checksums/*
+usr/lib/x86_64-linux-gnu/aws-checksums/cmake/shared/aws-checksums*.cmake
+usr/lib/x86_64-linux-gnu/aws-checksums/cmake/aws-checksums*.cmake
+
+# aws-c-event-stream
+usr/include/aws/event-stream/*
+usr/lib/x86_64-linux-gnu/aws-c-event-stream/cmake/shared/aws-c-event-stream*.cmake
+usr/lib/x86_64-linux-gnu/aws-c-event-stream/cmake/aws-c-event-stream*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-event-stream.so

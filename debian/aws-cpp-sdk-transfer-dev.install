@@ -1,0 +1,3 @@
+usr/include/aws/transfer/*
+usr/lib/x86_64-linux-gnu/pkgconfig/aws-cpp-sdk-transfer.pc
+usr/lib/x86_64-linux-gnu/cmake/aws-cpp-sdk-transfer/*.cmake
