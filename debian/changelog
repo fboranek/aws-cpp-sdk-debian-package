@@ -1,3 +1,9 @@
+aws-cpp-sdk (1.8.185~nmu+1) stable; urgency=medium
+
+  * upgrade
+
+ -- Frantisek Boranek <fboranek@gmail.com>  Wed, 22 Sep 2021 15:44:12 +0200
+
 aws-cpp-sdk (1.8.95~nmu+1) stable; urgency=medium
 
   * Initial release
