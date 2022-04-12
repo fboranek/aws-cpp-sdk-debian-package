@@ -1,0 +1,11 @@
+# Name: aws-cpp-sdk-s3-crt
+# Description: 
+# Version: 1.9.233
+# Cflags: -I${includedir} -fno-exceptions -std=c++17
+# Libs: -L${libdir} -laws-cpp-sdk-s3-crt 
+# Libs.private: 
+# Requires:  aws-cpp-sdk-core
+
+usr/include/aws/s3-crt/*
+usr/lib/x86_64-linux-gnu/pkgconfig/aws-cpp-sdk-s3-crt.pc
+usr/lib/x86_64-linux-gnu/cmake/aws-cpp-sdk-s3-crt/*.cmake

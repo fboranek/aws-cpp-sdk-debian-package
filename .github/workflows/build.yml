@@ -22,6 +22,8 @@ jobs:
       - run: docker container cp packages:aws-cpp-sdk-s30_${{ steps.version.outputs.VERSION }}_amd64.deb ./
       - run: docker container cp packages:aws-cpp-sdk-transfer-dev_${{ steps.version.outputs.VERSION }}_amd64.deb ./
       - run: docker container cp packages:aws-cpp-sdk-transfer0_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - run: docker container cp packages:aws-cpp-sdk-s3-crt-dev_${{ steps.version.outputs.VERSION }}_amd64.deb ./
+      - run: docker container cp packages:aws-cpp-sdk-s3-crt0_${{ steps.version.outputs.VERSION }}_amd64.deb ./
       - name: remove container
         run: docker container rm -f packages
       - name: Upload debian packages

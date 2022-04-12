@@ -13,3 +13,5 @@ debian/files
 debian/tmp/
 dist/
 obj-x86_64-linux-gnu/
+build/
+.cache/

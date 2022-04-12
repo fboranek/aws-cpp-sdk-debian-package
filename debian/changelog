@@ -1,3 +1,9 @@
+aws-cpp-sdk (1.9.233~nmu+1) stable; urgency=medium
+
+  * ubgrade to 1.9.233 and added s3-crt
+
+ -- Frantisek Boranek <frantisek.boranek@firma.seznam.cz>  Tue, 12 Apr 2022 21:50:34 +0200
+
 aws-cpp-sdk (1.8.185~nmu+1) stable; urgency=medium
 
   * upgrade

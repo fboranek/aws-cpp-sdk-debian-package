@@ -74,3 +74,23 @@ Depends:
 Description: High-level C++ SDK for file transfer to/from AWS S3
  .
  AWS SDK C++ bindings
+
+Package: aws-cpp-sdk-s3-crt-dev
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ aws-cpp-sdk-s3-crt0 (= ${binary:Version}),
+ aws-cpp-sdk-core-dev,
+Description: C++ SDK for the AWS s3 service
+
+Package: aws-cpp-sdk-s3-crt0
+Architecture: any
+Section: libs
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: C++ SDK for AWS S3
+ .
+ AWS SDK C++ bindings

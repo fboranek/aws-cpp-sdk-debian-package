@@ -1,3 +1,4 @@
-usr/include/aws/s3/*
+usr/include/aws/s3/S3*.h
+usr/include/aws/s3/model/*
 usr/lib/x86_64-linux-gnu/pkgconfig/aws-cpp-sdk-s3.pc
 usr/lib/x86_64-linux-gnu/cmake/aws-cpp-sdk-s3/*.cmake

@@ -1,3 +1,66 @@
+# cat /usr/lib/x86_64-linux-gnu/pkgconfig/aws-cpp-sdk-core.pc
+# includedir=/usr/include
+# libdir=/usr/lib/x86_64-linux-gnu
+#
+# Name: aws-cpp-sdk-core
+# Description: 
+# Version: 1.9.233
+# Cflags: -I${includedir} -fno-exceptions -std=c++17
+# Libs: -L${libdir} -laws-cpp-sdk-core 
+# Libs.private: -laws-crt-cpp -laws-c-auth -laws-c-cal -laws-c-common -laws-c-compression -laws-c-event-stream -laws-c-http -laws-c-io -laws-c-mqtt -laws-c-s3 -laws-checksums -lpthread -lcurl -lcrypto -lssl -lz
+# Requires: 
+
+# aws-crt-cpp
+usr/include/aws/crt/*
+usr/lib/x86_64-linux-gnu/aws-crt-cpp/cmake/aws-crt-cpp-config.cmake
+usr/lib/x86_64-linux-gnu/aws-crt-cpp/cmake/static/aws-crt-cpp*.cmake
+usr/lib/x86_64-linux-gnu/libaws-crt-cpp.a
+
+# aws-c-auth
+usr/include/aws/auth/*
+usr/lib/x86_64-linux-gnu/aws-c-auth/cmake/aws-c-auth-config.cmake
+usr/lib/x86_64-linux-gnu/aws-c-auth/cmake/static/aws-c-auth*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-auth.a
+
+# aws-c-cal
+usr/include/aws/cal/*
+usr/lib/x86_64-linux-gnu/aws-c-cal/cmake/aws-c-cal-config.cmake
+usr/lib/x86_64-linux-gnu/aws-c-cal/cmake/static/aws-c-cal*.cmake
+usr/lib/x86_64-linux-gnu/aws-c-cal/cmake/modules/FindLibCrypto.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-cal.a
+
+# aws-c-compression
+usr/include/aws/compression/*
+usr/lib/x86_64-linux-gnu/aws-c-compression/cmake/aws-c-compression-config.cmake
+usr/lib/x86_64-linux-gnu/aws-c-compression/cmake/static/aws-c-compression*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-compression.a
+
+# aws-c-http
+usr/include/aws/http/*
+usr/lib/x86_64-linux-gnu/aws-c-http/cmake/aws-c-http-config.cmake
+usr/lib/x86_64-linux-gnu/aws-c-http/cmake/static/aws-c-http*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-http.a
+
+# aws-c-io
+usr/include/aws/io/*
+usr/lib/x86_64-linux-gnu/aws-c-io/cmake/aws-c-io-config.cmake
+usr/lib/x86_64-linux-gnu/aws-c-io/cmake/static/aws-c-io*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-io.a
+
+# aws-c-mqtt
+usr/include/aws/mqtt/*
+usr/lib/x86_64-linux-gnu/aws-c-mqtt/cmake/aws-c-mqtt-config.cmake
+usr/lib/x86_64-linux-gnu/aws-c-mqtt/cmake/static/aws-c-mqtt*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-mqtt.a
+
+# aws-c-s3
+usr/include/aws/s3/exports.h
+usr/include/aws/s3/s3.h
+usr/include/aws/s3/s3_client.h
+usr/lib/x86_64-linux-gnu/aws-c-s3/cmake/aws-c-s3-config.cmake
+usr/lib/x86_64-linux-gnu/aws-c-s3/cmake/static/aws-c-s3*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-s3.a
+
 # aws-cpp-sdk-core
 usr/include/aws/core/*
 usr/lib/x86_64-linux-gnu/pkgconfig/aws-cpp-sdk-core.pc
@@ -6,10 +69,11 @@ usr/lib/x86_64-linux-gnu/cmake/aws-cpp-sdk-core/*.cmake
 # aws-c-common
 usr/include/aws/common/*
 usr/lib/x86_64-linux-gnu/aws-c-common/cmake/aws-c-common*.cmake
-usr/lib/x86_64-linux-gnu/aws-c-common/cmake/shared/aws-c-common*.cmake
-usr/lib/x86_64-linux-gnu/libaws-c-common.so
+usr/lib/x86_64-linux-gnu/aws-c-common/cmake/static/aws-c-common*.cmake
+usr/lib/x86_64-linux-gnu/libaws-c-common.a
 usr/lib/x86_64-linux-gnu/cmake/AwsCFlags.cmake
 usr/lib/x86_64-linux-gnu/cmake/AwsCheckHeaders.cmake
+usr/lib/x86_64-linux-gnu/cmake/AwsFeatureTests.cmake
 usr/lib/x86_64-linux-gnu/cmake/AwsSharedLibSetup.cmake
 usr/lib/x86_64-linux-gnu/cmake/AwsTestHarness.cmake
 usr/lib/x86_64-linux-gnu/cmake/AwsLibFuzzer.cmake
@@ -19,11 +83,11 @@ usr/lib/x86_64-linux-gnu/cmake/AwsFindPackage.cmake
 
 # aws-checksums
 usr/include/aws/checksums/*
-usr/lib/x86_64-linux-gnu/aws-checksums/cmake/shared/aws-checksums*.cmake
+usr/lib/x86_64-linux-gnu/aws-checksums/cmake/static/aws-checksums*.cmake
 usr/lib/x86_64-linux-gnu/aws-checksums/cmake/aws-checksums*.cmake
 
 # aws-c-event-stream
 usr/include/aws/event-stream/*
-usr/lib/x86_64-linux-gnu/aws-c-event-stream/cmake/shared/aws-c-event-stream*.cmake
+usr/lib/x86_64-linux-gnu/aws-c-event-stream/cmake/static/aws-c-event-stream*.cmake
 usr/lib/x86_64-linux-gnu/aws-c-event-stream/cmake/aws-c-event-stream*.cmake
-usr/lib/x86_64-linux-gnu/libaws-c-event-stream.so
+usr/lib/x86_64-linux-gnu/libaws-c-event-stream.a

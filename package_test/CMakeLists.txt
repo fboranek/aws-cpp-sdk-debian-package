@@ -14,11 +14,17 @@ find_package(aws-cpp-sdk-transfer REQUIRED)
 # expected:
 # -- Checking for module 'aws-cpp-sdk-transfer'
 # --   Found aws-cpp-sdk-transfer, version 1.8.95
+
+# test configure via cmake-config
+find_package(aws-cpp-sdk-s3-crt REQUIRED)
+
 add_executable(${PROJECT_NAME}-cmake src/main.cc)
 target_link_libraries(${PROJECT_NAME}-cmake
     aws-cpp-sdk-core
     aws-cpp-sdk-s3
-    aws-cpp-sdk-transfer)
+    aws-cpp-sdk-transfer
+    aws-cpp-sdk-s3-crt
+)
 add_test(${PROJECT_NAME}-cmake ${PROJECT_NAME}-cmake)
 
 
@@ -27,6 +33,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(project_deps
 REQUIRED
     aws-cpp-sdk-transfer
+    aws-cpp-sdk-s3-crt
 )
 add_executable(${PROJECT_NAME}-pkgconfig src/main.cc)
 target_link_libraries(${PROJECT_NAME}-pkgconfig ${project_deps_LIBRARIES})

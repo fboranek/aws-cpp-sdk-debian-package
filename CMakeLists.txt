@@ -40,13 +40,9 @@ set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 set(BUILD_SHARED_LIBS ON CACHE BOOL "Set appriory project value" FORCE)
 set(CPP_STANDARD ${CMAKE_CXX_STANDARD} CACHE STRING "Set appriory project value" FORCE)
 set(SIMPLE_INSTALL ON CACHE BOOL "Set appriory project value" FORCE)
-# third party dependencies are build and copied to default system directory during SDK build, so it needs root access
-# and it makes harder to create package for these third party library. Set dedicated install dir for them.
-set(AWS_DEPS_INSTALL_DIR "${CMAKE_CURRENT_BINARY_DIR}/aws_deps" CACHE PATH "Dependencies install directory.")
 set(BUILD_ONLY
-    "core"
-    "s3"
-    "transfer"
+    "s3-crt"   # depends: core
+    "transfer" # depends: core, s3
     CACHE STRING "Set appriory project value" FORCE)
 
 # upstream project
@@ -64,6 +60,3 @@ if(NOT sdk_POPULATED)
     endif()
     add_subdirectory("${sdk_SOURCE_DIR}" "${sdk_BINARY_DIR}")
 endif()
-
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/aws_deps/include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/aws_deps/lib/ DESTINATION ${CMAKE_INSTALL_LIBDIR})
